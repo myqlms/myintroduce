@@ -1,0 +1,112 @@
+<section>
+	<h2>生活如图，图如生活</h2>
+</section>
+<article>
+	人生已过23载，刚出校园。<br/>
+	以前的我看着过往匆忙的人们，总感觉自己和他们会有点不一样。<br/>
+	忙碌不为生活，而为理想。现在发现其实我错了，我的理想就是想要生活。<br/>
+	每个人其实并没有区别，那些走在街边的人，坐在车上的人。<br/>
+	也许他们想要的生活会有不一样。但那都不重要，生活没有贵贱。<br/>
+	我很感激我有个完整的学习生涯。<br/>
+	接着我相信会拥有让我同样感激的职业生涯。
+</article>
+<a href="#/info"><b class="prev">&lt;</b></a>
+<a href="#/introduce"><b class="next">&gt;</b></a>
+<style>
+	article{
+		position: absolute;
+		bottom:80px;
+		left:50px;
+		z-index: 102;
+		line-height:25px;
+		font-style: italic;
+		font-family:"微软雅黑";
+		letter-spacing: 3px;
+		color:#09848d;
+		text-shadow: 1px 1px 0.5px black;
+	}
+	b{
+		position:absolute;
+		font-size: 30px;
+		color:#aaaaaa;
+	}
+	b:hover{
+		color:#03CCBB;
+	}
+	.prev{
+		bottom: 30px;
+		right:100px;
+	}
+	.next{
+		bottom: 30px;
+		right:50px;
+	}
+	section{
+		padding-top:50px ;
+		height:800px;
+		background:#eee;
+		position:relative;
+	}
+	h2{
+		text-align: center;
+		color:#00FF00;
+		margin-bottom:30px;
+	}
+	img:hover{
+		animation: mylife 5s;
+		-webkit-animation: mylife 5s;
+		-webkit-animation-fill-mode:both;
+		-moz-animation: mylife 5s;
+		-moz-animation-fill-mode:both;
+	}
+	@-webkit-keyframes mylife{
+		from{}
+		to{
+			transform:rotate(0deg) scale(2,2);
+			opacity: 0.8;
+			z-index: 101;
+		}
+	}
+	@-moz-keyframes mylife{
+		from{}
+		to{
+			transform:rotate(0deg) scale(2,2);
+			opacity: 0.8;
+			z-index: 100;
+		}
+	}
+</style>
+<script>
+	var k=150;
+	for(var i=1;i<=11;i++){
+		var s = Math.floor(Math.random()*360);
+		var m = Math.floor(Math.random()*100);
+		var n = 180*(i);
+		if(n>1100){
+			k = 350;
+			n = n-1000;
+		}
+		$('<img/>').attr({
+			'src':'dist/img/mylife'+i+'.jpg',
+		}).css({
+			'width':200,
+			'height':200,
+			'border':'10px solid #fff',
+			'margin':10,
+			'position':'absolute',
+			'left':n,
+			"top":k,
+			"z-index":m,
+			'transform':"rotate("+s+"deg)",
+		}).appendTo('section')
+	}
+	
+	/*$('section').on('mouseenter','img',function(){
+		$(this).css({
+			'transition':'3s',
+			"z-index":100,
+			'transform':"rotate("+0+"deg)",
+			'transform':"scale(1.5,1.5)",
+		})
+	})*/
+</script>

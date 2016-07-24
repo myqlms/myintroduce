@@ -1,0 +1,113 @@
+<img src="dist/img/my.JPG"  />
+<article>
+	<p>我的情况</p>
+	<span>姓郑名永椒<br/>;英文名<br/>:<br/>M<br/>O<br/>R<br/>G<br/>E<br/>N</span>
+	<span>出生日<br/>:<br/>1<br/>9<br/>9<br/>3<br/>.<br/>0<br/>4</span>
+	<span>出生地<br/>:福建三明<br/>。</span>
+	<span>t<br/>e<br/>l<br/>:<br/>1<br/>8<br/>5<br/>0<br/>3<br/>0<br/>5<br/>4<br/>4<br/>5<br/>5</span>
+	<span style='overflow:hidden;'>e<br/>m<br/>a<br/>i<br/>l<br/>:<br/>c<br/>h<br/>e<br/>q<br/>i<br/>a<br/>n<br/>3<br/>5<br/>0<br/>4<br/>2<br/>5<br/>@<br/>1<br/>6<br/>3<br/>.<br/>c<br/>o<br/>m</span>
+	<span>教育经历<br/>2<br/>0<br/>1<br/>1<br/>.<br/>9<br/>|<br/>2<br/>0<br/>1<br/>5<br/>.<br/>7<br/></span>
+	<span>福建省闽江学院<br/>，测绘工程专业</span>
+	<aside>
+		个人技能:精通HTML5，css3页面布局，JavaScript，ajax等前端设计
+	</aside>	
+	<aside>熟悉：jQuery，angularjs，bootstrap。等框架技术</aside>
+	<aside>了解：网页性能优化，各个浏览器间的兼容问题</aside>
+	<aside>Web前端开发经验1年以上工作经验；</aside>
+	<aside>
+		工作内容:负责前端页面构建的各个模块开发，功能实现，性能优化。前后端完全分离。
+		出于工作的保密性。项目代码不展示。<br/>
+		个人github地址：https://github.com/myqlms
+	</aside>	
+	<a href="#/index"><b class="prev">&lt;</b></a>
+	<a href="#/life"><b class="next">&gt;</b></a>
+</article>
+	
+<style>
+	b{
+		position: absolute;
+		font-size: 30px;
+		color:#aaaaaa;
+	}
+	b:hover{
+		color:#03ccbb;
+	}
+	.prev{
+		bottom: 30px;
+		left:350px;
+	}
+	.next{
+		bottom:30px;
+		left:400px;
+	}
+	
+	img{
+		width:800px;
+		height:300px;
+		position:absolute;
+		left:20%;
+		top:-100px;
+		opacity: 0.6;
+			/*height:100%;
+			background:url(dist/img/my.JPG)no-repeat center -100px;
+			background-size:80% 300px;*/	
+		}
+	article{
+		padding-top: 30px;
+		width:800px;
+		height:450px;
+		background:#ccc;
+		position:absolute;
+		top:170px;
+		left:20%;
+	}
+	p{	
+		position:absolute;
+		width: 100%;
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		letter-spacing: 10px;
+		color:#03ccbb;
+		top:-15px;
+	}
+	article span{
+		font-weight: 800;
+		color:#005bad;	
+		text-align: center;
+		display: block;
+		float: left;	
+		width:2em;
+		margin-right: 10px;
+		letter-spacing: 5px;
+		line-height:25px;
+		height:400px;
+	}
+	aside{
+		float:right;
+		font-weight: 800;
+		color:#005bad;	
+		text-align:left;
+		letter-spacing: 5px;
+		line-height:25px;
+		/*position:absolute;
+		top:30px;
+		right:10px;*/
+		width:360px;
+		margin-bottom:30px;
+	}
+</style>
+<script>
+	$('span').hide();
+	$.each($('span'),function(index,item){
+		setTimeout(function(){
+			$(item).show(400)
+		},1000*(index+1))
+	})
+	$('aside').hide();
+	$.each($('aside'),function(index,item){
+		setTimeout(function(){
+			$(item).show(400)
+		},1000*(index+$('span').length-3))
+	})
+</script>

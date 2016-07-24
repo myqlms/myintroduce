@@ -1,0 +1,84 @@
+<div id="div1">
+	<strong>MORGEN</strong><br/><strong>/</strong><br /><strong>DESIGNER</strong>
+	<div class="list">
+		<img src="dist/img/li.png"/>
+		<div style="clear: both;height: 0;"></div>
+		<ul>
+			<li><a href="#/info">基本情况</a></li>
+			<li><a href="#/life">我的生活</a></li>
+			<li><a href="#/introduce">自我评价</a></li>
+		</ul>
+	</div>
+	<a href="#/info"><span>&gt;</span></a>
+</div>
+
+<style>
+	a{
+		text-decoration: none;
+		color:#000;
+	}
+	a:hover{
+		color:#0f0;
+	}
+	#div1{
+		margin: 0 auto;
+		position:relative;
+		top:20px;
+		width:90%;
+		height:500px;
+		font-size: 40px;
+		text-align: center;
+		border: 10px solid #bbb;
+		line-height: 70px;
+		background: #efefef;
+		/*background-origin:content-box;*/
+		padding-top: 15%;
+		letter-spacing: 10px;
+	}
+	.list{
+		position:absolute;
+		top:30px;
+		right:40px;
+	}
+	.list img{
+		display: block;
+		float: right;
+	}
+	ul{
+		display: none;
+	}
+	li{
+		list-style: none;
+		font-size: 14px;
+		line-height: 30px;
+		letter-spacing: 3px;
+	}
+	span{
+		position: absolute;
+		bottom: 20px;
+		right:40px;
+		font-size: 30px;
+		font-weight: bold;
+		cursor:pointer;
+	}
+	span:hover{
+		color:#0f0;
+	}
+</style>
+<script>
+	$('img').on('click',function(){
+		$('ul').toggleClass('active');
+		//console.log($('ul').hasClass('active'));
+		if($('ul').hasClass('active')){
+			$('ul').fadeIn();
+		}else{
+			$('ul').fadeOut();
+		}
+		
+	})
+		
+	$('ul').on('mouseleave',function(){
+			$('ul').removeClass('active');
+			$('ul').fadeOut();
+	})
+</script>
