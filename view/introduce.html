@@ -1,0 +1,152 @@
+<h3>自我评价</h3>
+<section id="section1">
+	<div class="box1">
+		<article class="article1" >
+			<h5>一、自我介绍</h5>
+		　　	男，93年出生(真实年龄决不瞒报)，无婚史、现居广州。<br/>  本人性格开朗，为人真诚，无不良嗜好(抽烟、偶尔和朋友小聚喝点但最多5瓶啤酒;也算情理之中)，
+			<br/>  健康状况良好，各个部位都运作正常。<br/>  福建省三明市人。家中有瓦房数间，没车。事业有待发展。
+		</article>
+		<article class="article2">
+			<h5>二、 优势分析</h5>
+			　　1、 对人总是热情中带着真诚。<br/>
+			
+			　　2、 做事认真负责，今日事，今日毕。不让昨天的放纵成为今天的烦恼。<br/>
+			
+			　　3、 性格开朗、善良、理智和冲动并存的混合型选手，只分析问题，不用暴力解决问题。<br/>
+			
+			　　4、我真的是好人!<br/>
+		</article>
+	</div>
+	<article class="article3">
+		<h5>三、 劣势分析</h5>
+		　　1、 言多必失<br/>
+		
+		　　2、赖床，拖延症<br/>
+		
+		　　3、我不想做个好人!<br/>
+		
+		　　4、没有别的缺点是我最大的缺点 <br/>
+	</article>
+	
+</section>
+<a href="#/life"><span>&lt;</span></a>
+<style>
+		span{
+			font-size: 30px;
+			position:absolute;
+			bottom:30px;
+			right:70px;
+			color:#03ccbb
+		}
+		body{
+			height:100%;
+			background:url(dist/img/shuipao.gif) no-repeat;
+			background-size:100% 800px;
+			
+		}
+		h3{
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			color:#3434ee ;
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+		h5{
+			font-size: 18px;
+		}
+	@media only screen and (min-width: 600px){
+		
+	  	section{
+	  		line-height: 30px;
+	  		width:85%;
+	  		margin:0 auto;
+	  		padding-bottom:30px ;
+	  	}
+		.article1{
+			padding: 10px;
+			/*background-image:url(dist/img/shuipao2.jpg);*/
+			opacity: 0.6;
+			background-size:100%;
+			color:white;
+			margin-right:30px
+		}
+		.article2{
+			margin-top:20px;padding: 10px;
+			opacity: 0.6;
+			background-size:100%;
+			color:white;
+		}
+		.article3{
+			margin-top:20px;padding: 10px;
+			opacity: 0.6;
+			background-size:100%;
+			color:white;
+			
+		}
+		
+	}
+	@media only screen and (max-width: 600px) {
+		section{
+			line-height: 30px;
+	  		width:85%;
+	  		margin:0 auto;
+	  		padding-bottom:30px ;
+	  		
+	  	}
+	  	.box1{
+	  		display: flex;
+	  	}
+		.article1{
+			flex: 1;
+			background-image:url(dist/img/shuipao.jpg);
+			background-size:cover;
+			color:white;
+			margin-right:30px;
+			opacity: 0.7;
+		}
+		.article2{
+			flex: 1;
+			background-image:url(dist/img/shuipao.jpg);
+			background-size:cover;
+			color:white;
+			opacity: 0.7;
+		}
+		.article3{
+			margin-top:20px;padding: 10px;
+			background-image:url(dist/img/shuipao.jpg);
+			background-size:100%;
+			opacity: 0.7;
+			color:white;
+		}
+	}
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(function(){
+	typewrite("section1")
+	function typewrite(id){
+		var $ele = document.getElementById(id);
+		var str = $ele.innerHTML,progress = 0;
+		//$('p').eq(4).css({'font-color':"red"})
+		$ele.innerHTML =  "";
+		var timer =setInterval(function(){
+			var current = str.substr(progress,1);
+			console.log()
+			if (current=="<") {
+				progress = str.indexOf(">",progress)+1;
+			}
+			else{
+				progress++;
+			}
+			$ele.innerHTML = str.substring(0,progress)+(progress&1?"_":"");
+			//console.log(progress);
+			//console.log(progress&1)  
+			if (progress>=str.length) {
+				clearInterval(timer)
+			}
+		},50)
+	}
+	
+})
+</script>
