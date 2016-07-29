@@ -15,7 +15,7 @@
 <style>
 	article{
 		position: absolute;
-		bottom:80px;
+		top:600px;
 		left:50px;
 		z-index: 102;
 		line-height:25px;
@@ -34,16 +34,17 @@
 		color:#03CCBB;
 	}
 	.prev{
-		bottom: 30px;
-		right:100px;
+		top: 30px;
+		left:50px;
 	}
 	.next{
-		bottom: 30px;
-		right:50px;
+		top: 30px;
+		left:100px;
 	}
 	section{
 		padding-top:50px ;
 		height:800px;
+		width:100%;
 		background:#eee;
 		position:relative;
 	}
@@ -103,7 +104,12 @@
 			'transform':"rotate("+s+"deg)",
 		}).appendTo('section')
 	}
-	
+	jQuery(function($){
+		//console.log($(window).height());
+		$('section').css({
+			'height':$(window).height(),
+		})
+	})
 	/*$('section').on('mouseenter','img',function(){
 		$(this).css({
 			'transition':'3s',

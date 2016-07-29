@@ -34,14 +34,14 @@
 		span{
 			font-size: 30px;
 			position:absolute;
-			bottom:30px;
-			right:70px;
-			color:#03ccbb
+			bottom:100px;
+			right:100px;
+			color:#03ccbb;
 		}
 		body{
 			height:100%;
 			background:url(dist/img/shuipao.gif) no-repeat;
-			background-size:100% 800px;
+			background-size:100% 100%;
 			
 		}
 		h3{
@@ -67,20 +67,20 @@
 			padding: 10px;
 			/*background-image:url(dist/img/shuipao2.jpg);*/
 			opacity: 0.6;
-			background-size:100%;
+			/*background-size:100%;*/
 			color:white;
 			margin-right:30px
 		}
 		.article2{
 			margin-top:20px;padding: 10px;
 			opacity: 0.6;
-			background-size:100%;
+			
 			color:white;
 		}
 		.article3{
 			margin-top:20px;padding: 10px;
 			opacity: 0.6;
-			background-size:100%;
+			
 			color:white;
 			
 		}
@@ -148,5 +148,11 @@ $(function(){
 		},50)
 	}
 	
+})
+jQuery(function($){
+	console.log($(window).height());
+	$('body').css({
+		'height':$(window).height(),
+	})
 })
 </script>
